@@ -1,35 +1,46 @@
 <template>
   <div class="tc-note">
     <div class="tc-note-header">
-        <span @click="deleteNote" class="tc-note-close">
-            X
-        </span>
+      <span @click="deleteNote" class="tc-note-close">
+          X
+      </span>
     </div>
-    <div class="tc-note-title" contenteditable="">
-        {{note.title}}
+    <div class="tc-note-title" contenteditable="" @blur="titleChanged">
+      {{note.title}}
     </div>
-    <div class="tc-note-body" contenteditable="">
-        {{note.body}}
+    <div class="tc-note-body" v-html="note.body" contenteditable="" @blur="bodyChanged">
     </div>
-</div>
+  </div>
 </template>
 
 <script>
-
-export default {
-  name: 'Note',
-  props: {
-    note: {
-      type: Object,
-      required: true
-    }
-  },
-  methods: {
-    deleteNote(){
-      this.$emit('deleteNote', this.note);
+  export default {
+    name: "Note",
+    props: {
+      note: {
+        type: Object,
+        required: true
+      }
+    },
+    watch: {
+      ['note.title']() {
+        console.log("note changed");
+      }
+    },
+    methods: {
+      titleChanged($event) {
+        this.note.title = $event.target.innerHTML;
+        this.$emit('updateNote', this.note);
+      },
+      bodyChanged($event) {
+        this.note.body = $event.target.innerHTML;
+        this.$emit('updateNote', this.note);
+      },
+      deleteNote() {
+        this.$emit('deleteNote', this.note);
+      }
     }
   }
-}
 </script>
 
 <style lang="scss" scoped>
