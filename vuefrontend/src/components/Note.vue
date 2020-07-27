@@ -1,8 +1,8 @@
 <template>
   <div class="tc-note">
     <div class="tc-note-header">
-        <span class="tc-note-close">
-            <i class="fas fa-times"></i>
+        <span @click="deleteNote" class="tc-note-close">
+            X
         </span>
     </div>
     <div class="tc-note-title" contenteditable="">
@@ -22,6 +22,11 @@ export default {
     note: {
       type: Object,
       required: true
+    }
+  },
+  methods: {
+    deleteNote(){
+      this.$emit('deleteNote', this.note);
     }
   }
 }

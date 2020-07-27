@@ -1,8 +1,8 @@
 <template>
   <div class="tc-notes-wrapper">
-    <add-new-button/>
+    <add-new-button @addNote="addNote" />
     <div class="tc-notes">
-      <note v-for="(note, index) in notes" :key="index" :note="note"/>
+      <note v-for="(note, index) in notes" :key="index" :note="note" @deleteNote="deleteNote"/>
     </div>
   </div>
 </template>
@@ -37,6 +37,14 @@
             body: 'est rerum tempore vitae<br>nsequi sint nihil reprehenderit dolor beatae ea dolores neque <br>fugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis<br>qui aperiam non debitis possimus qui neque nisi nulla'
           },
         ]
+      }
+    },
+    methods: {
+      addNote(){
+        this.notes.unshift({title:'', body:''});
+      },
+      deleteNote(note){
+        this.notes.splice(this.notes.indexOf(note), 1);
       }
     }
   }
