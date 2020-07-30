@@ -1,4 +1,5 @@
 {
+  "start": "http-server -a localhost -p 8081",
   "name": "vuefrontend",
   "version": "0.1.0",
   "private": true,
