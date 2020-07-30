@@ -17,7 +17,7 @@ class LoginForm extends \app\models\LoginForm
 
     /**
      * @return \app\models\User|UserResource|bool|null
-     * @author Fajar Stria <ryansat46@gmail.com>
+     * @author Fajar Satria<ryasnat46@gmail.com>
      */
     public function getUser()
     {

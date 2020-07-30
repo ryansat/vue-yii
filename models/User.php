@@ -12,7 +12,7 @@ use yii\db\ActiveRecord;
  * @property string $password_hash
  * @property string $access_token
  *
- * @author Fajar Stria <ryansat46@gmail.com>
+ * @author Fajar Satria<ryasnat46@gmail.com>
  * @package app\models
  */
 class User extends ActiveRecord implements \yii\web\IdentityInterface

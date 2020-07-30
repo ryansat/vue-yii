@@ -1,9 +1,9 @@
 <template>
   <div class="tc-note">
     <div class="tc-note-header">
-      <span @click="deleteNote" class="tc-note-close">
-          X
-      </span>
+                <span @click="deleteNote" class="tc-note-close">
+                    X
+                </span>
     </div>
     <div class="tc-note-title" contenteditable="" @blur="titleChanged">
       {{note.title}}

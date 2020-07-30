@@ -1,4 +1,10 @@
 <?php
+/**
+ * User: Fajar Satria
+ * Date: 3/7/2020
+ * Time: 9:18 AM
+ */
+
 namespace app\modules\api\controllers;
 
 
@@ -13,7 +19,7 @@ use yii\web\UnauthorizedHttpException;
 /**
  * Class UserController
  *
- * @author Fajar Stria <ryansat46@gmail.com>
+ * @author Fajar Satria<ryasnat46@gmail.com>
  * @package app\modules\api\controllers
  */
 class UserController extends Controller

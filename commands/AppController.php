@@ -1,6 +1,6 @@
 <?php
 /**
- * User: TheCodeholic
+ * User: Fajar Satria
  * Date: 3/7/2020
  * Time: 9:06 AM
  */
@@ -15,7 +15,7 @@ use yii\helpers\Console;
 /**
  * Class AppController
  *
- * @author Fajar Stria <ryansat46@gmail.com>
+ * @author Fajar Satria<ryasnat46@gmail.com>
  * @package app\commands
  */
 class AppController extends Controller

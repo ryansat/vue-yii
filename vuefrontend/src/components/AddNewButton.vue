@@ -1,16 +1,16 @@
 <template>
-  <button @click="addNote" class="new-note-btn">New Note</button>
+  <button @click="addNote" class="new-note-btn">Add note</button>
 </template>
 
 <script>
-export default {
-  name: 'AddNewButton',
-  methods: {
-    addNote(){
-      this.$emit('addNote');
+  export default {
+    name: "AddNewButton",
+    methods: {
+      addNote() {
+        this.$emit('addNote')
+      }
     }
   }
-}
 </script>
 
 <style lang="scss" scoped>

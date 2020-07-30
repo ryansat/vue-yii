@@ -1,6 +1,6 @@
 <?php
 /**
- * User: TheCodeholic
+ * User: Fajar Satria
  * Date: 3/7/2020
  * Time: 9:35 AM
  */
@@ -17,7 +17,7 @@ use yii\rest\ActiveController;
 /**
  * Class NotesController
  *
- * @author Fajar Stria <ryansat46@gmail.com>
+ * @author Fajar Satria<ryasnat46@gmail.com>
  * @package app\modules\api\controllers
  */
 class NoteController extends ActiveController

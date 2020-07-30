@@ -5,7 +5,7 @@ import DefaultLayout from "../layouts/DefaultLayout";
 import AuthLayout from "../layouts/AuthLayout";
 import Login from "../views/Login";
 import Register from "../views/Register";
-// import authService from "../services/auth.service";
+import authService from "../services/auth.service";
 
 Vue.use(VueRouter)
 
@@ -56,14 +56,14 @@ const router = new VueRouter({
   routes
 });
 
-// router.beforeEach((to, from, next) => {
-//   if (to.name === 'home' && !authService.isLoggedIn()) {
-//     next({name: 'login'})
-//   } else if (authService.isLoggedIn() && to.name !== 'home'){
-//     next({name: 'home'})
-//   } else {
-//     next();
-//   }
-// });
+router.beforeEach((to, from, next) => {
+  if (to.name === 'home' && !authService.isLoggedIn()) {
+    next({name: 'login'})
+  } else if (authService.isLoggedIn() && to.name !== 'home'){
+    next({name: 'home'})
+  } else {
+    next();
+  }
+});
 
 export default router
